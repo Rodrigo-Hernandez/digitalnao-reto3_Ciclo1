@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    tools {
+         jdk "Java SE 17"
+                
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+
+                git 'https://github.com/joseFranciscoHS/fullstack-app.git'
+
+                sh 'java -version'
+
+                           }
+
+                   }
+    }
+}
