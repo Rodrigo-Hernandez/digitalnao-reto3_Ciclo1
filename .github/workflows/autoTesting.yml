@@ -13,6 +13,16 @@ jobs:
       - name: Set Up Java
         uses: actions/setup-java@v2
         with:
-          java-version: '7'
+          java-version: '17'
       - run: npm install -g bats
       - run: bats -v
+      
+  pipeline:
+     name: PipeLine
+     uses: actions/setup-java
+     with:
+          java-version: '17'
+          build: git 'https://github.com/joseFranciscoHS/fullstack-app.git'
+          run: java -v
+            
+          
